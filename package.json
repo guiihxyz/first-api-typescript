@@ -1,0 +1,60 @@
+{
+  "name": "first-api-typescript",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Primeira API com fastify usando TypeScript",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx --env-file=.env src/index.ts",
+    "start": "node --env-file=.env .",
+    "watch": "tsx --env-file=.env --watch src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guiihxyz/first-api-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guiihxyz/first-api-typescript/issues"
+  },
+  "homepage": "https://github.com/guiihxyz/first-api-typescript#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.3.1",
+    "@fastify/cors": "^11.0.1",
+    "better-sqlite3": "^11.10.0",
+    "chalk": "^5.4.1",
+    "consola": "^3.4.2",
+    "fastify": "^5.4.0",
+    "http-status-codes": "^2.3.0",
+    "quick.db": "^9.1.7",
+    "zod": "^3.25.64"
+  },
+  "imports": {
+    "#settings/*": [
+      "./build/settings/*"
+    ],
+    "#functions/*": [
+      "./build/functions/*"
+    ],
+    "#services/*": [
+      "./build/services/*"
+    ],
+    "#controllers/*": [
+      "./build/controllers/*"
+    ],
+    "#schemas/*": [
+      "./build/database/schemas/*"
+    ],
+    "#database": [
+      "./build/database/index.js"
+    ]
+  }
+}
